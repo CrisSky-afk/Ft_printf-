@@ -58,6 +58,7 @@ int	ft_printf(const char *format, ...)
 			i++;
 		}
 	}
+	va_end (arg);
 	return (ret);
 }
 
