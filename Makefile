@@ -1,24 +1,31 @@
 NAME = libftprintf.a
-
-SRC_DIR = ./
+TEST = test_printf
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRC = ft_printf.c ft_function.c ft_functions.c
-OBJ = $(SRC:.c=.o)
+
+SRCS = ft_printf.c ft_function.c ft_functions.c
+OBJS = $(SRCS:.c=.o)
+
+TEST_MAIN = main.c
 
 all: $(NAME)
 
-$(NAME) : $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
-%.o: %.c ft_printf.h
-	$(CC) $(CFLAGS) -c $< -o $@
+$(TEST): $(NAME) $(TEST_MAIN)
+	$(CC) $(CFLAGS) $(TEST_MAIN) -L. -lftprintf -o $(TEST)
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(TEST)
 
 re: fclean all
+
+test: $(TEST)
+	./$(TEST)
+
+.PHONY: all clean fclean re test

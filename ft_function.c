@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_function.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csuomins <csuomins@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cris <cris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 17:45:07 by csuomins          #+#    #+#             */
-/*   Updated: 2025/08/26 18:13:36 by csuomins         ###   ########.fr       */
+/*   Updated: 2026/06/22 15:55:36 by cris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,25 +47,3 @@ int	ft_putnbr(int nb)
 	ret += ft_putchar((number % 10) + '0');
 	return (ret);
 }
-
-// int main (void) //main da ft_putstr
-// {
-// 	char *str1 = "testando uns negocio ai";
-// 	char *str2 = NULL;
-// 	int n1 = ft_putstr(str1);
-
-// 	write (1, "\n", 1);
-	// ft_putstr(str1);
-	// ft_putchar('\n');
-	// ft_putstr(str2);
-	// ft_putchar('\n');
-
-// 	printf("%d\n", n1);
-// }
-
-// int main (void) \\ main ft_putnbr
-// {
-// 	int		n = 1654;
-// 	printf("%i\n", n);
-// 	printf("%d\n", ft_putnbr(n));
-// }

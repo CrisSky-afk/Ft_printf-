@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csuomins <csuomins@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cris <cris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 17:28:57 by csuomins          #+#    #+#             */
-/*   Updated: 2025/08/26 17:55:52 by csuomins         ###   ########.fr       */
+/*   Updated: 2026/06/22 15:56:33 by cris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,19 +61,3 @@ int	ft_printf(const char *format, ...)
 	va_end (arg);
 	return (ret);
 }
-
-// int main (void)
-// {
-// 	int n = 42;
-// 	void *ptr = &n;
-// 	ft_printf("Hello world!\n");
-// 	ft_printf("Char: %c\n", 'A');
-// 	ft_printf("String: %s\n", "Bom dia com b de bacana");
-// 	ft_printf("Inteiro: %d\n", -86);
-// 	ft_printf("Decimal: %i\n", 344);
-// 	ft_printf("Números sem sinais: %u\n", 3535);
-// 	ft_printf("Hexadecimal em minúsculo: %x\n", 63265719);
-// 	ft_printf("Hexadecimal em maiúsculo: %X\n", 63265719);
-// 	ft_printf("Sinal de porcebtagem: %%\n");
-// 	ft_printf("Ponteiro: %p\n", ptr);
-// }
